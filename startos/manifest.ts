@@ -1,14 +1,14 @@
 import { setupManifest } from '@start9labs/start-sdk'
 
 export const manifest = setupManifest({
-  id: 'hello-world',
-  title: 'Hello World',
+  id: 'maple-proxy',
+  title: 'Maple Proxy',
   license: 'MIT',
   wrapperRepo: 'https://github.com/Start9Labs/hello-world-startos',
-  upstreamRepo: 'https://github.com/Start9Labs/hello-world',
-  supportSite: 'https://docs.start9.com/',
-  marketingSite: 'https://start9.com/',
-  donationUrl: 'https://donate.start9.com/',
+  upstreamRepo: 'https://github.com/OpenSecretCloud/maple-proxy',
+  supportSite: 'https://trymaple.ai',
+  marketingSite: 'https://trymaple.ai',
+  donationUrl: 'https://trymaple.ai',
   docsUrl:
     'https://github.com/Start9Labs/hello-world-startos/blob/master/instructions.md',
   description: {
@@ -17,8 +17,10 @@ export const manifest = setupManifest({
   },
   volumes: ['main'],
   images: {
-    'hello-world': {
-      source: { dockerTag: 'start9/hello-world' },
+    'maple-proxy': {
+      source: {
+        dockerTag: 'ghcr.io/opensecretcloud/maple-proxy:0.1.5'
+      },
     },
   },
   alerts: {
