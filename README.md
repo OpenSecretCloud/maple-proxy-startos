@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icon.png" alt="Project Logo" width="21%">
+  <img src="https://github.com/user-attachments/assets/3ed629a1-e5a9-42f0-a920-a1819ed92983" />
 </p>
 
 ## Building from source
