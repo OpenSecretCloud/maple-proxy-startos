@@ -4,7 +4,7 @@ Maple Proxy provides a local API proxy for encrypted, privacy-preserving AI serv
 
 ## Usage
 
-Once installed, Maple Proxy exposes an API endpoint that you can use to interact with Maple AI services.
+Once installed, Maple Proxy exposes an API endpoint that you can use to interact with Maple AI encrypted models. Maple is compatible with tools that use the OpenAI API format.
 
 ## Configuration
 
@@ -12,4 +12,4 @@ API keys can be configured through the service settings or provided per-request 
 
 ## Documentation
 
-For full documentation, visit: https://blog.trymaple.ai/maple-proxy-documentation/
+For full documentation, visit the [Maple Proxy Documentation](https://blog.trymaple.ai/maple-proxy-documentation/).

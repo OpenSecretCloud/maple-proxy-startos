@@ -7,10 +7,12 @@ export const main = sdk.setupMain(async ({ effects }) => {
 
   const proxyEnv: {
     MAPLE_HOST: string,
+    MAPLE_PORT: string,
     MAPLE_ENABLE_CORS: string,
     MAPLE_API_KEY?: string,
   } = {
     MAPLE_HOST: '0.0.0.0',
+    MAPLE_PORT: '8080',
     MAPLE_ENABLE_CORS: 'true',
   }
 
