@@ -1,17 +1,15 @@
-# Instructions for Hello World on StartOS
+# Maple Proxy for StartOS
 
-Hello World is a bare bones template for bootstrapping packages for StartOS.
+Maple Proxy provides a local API proxy for encrypted, privacy-preserving AI services.
 
-## How to use the template
+## Usage
 
-1. Access [hello-world-startos](https://github.com/Start9Labs/hello-world-startos).
+Once installed, Maple Proxy exposes an API endpoint that you can use to interact with Maple AI encrypted models. Maple is compatible with tools that use the OpenAI API format.
 
-1. Click "Use this template", then "Create new repository". You must be signed into Github to see this button.
+## Configuration
 
-1. Name your repository. The name should be `[service-name]-startos`. For example, `NextCloud` is `nextcloud-startos` and `Lightning Terminal` is `lightning-terminal-startos`.
+API keys can be configured through the service settings or provided per-request via the `Authorization` header.
 
-1. For the repository description, enter "StartOS package for [Service Name]".
+## Documentation
 
-1. Make sure the repository is Public.
-
-1. Click "Create Repository".
+For full documentation, visit the [Maple Proxy Documentation](https://blog.trymaple.ai/maple-proxy-documentation/).

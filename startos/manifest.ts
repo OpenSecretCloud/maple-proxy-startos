@@ -1,24 +1,25 @@
 import { setupManifest } from '@start9labs/start-sdk'
 
 export const manifest = setupManifest({
-  id: 'hello-world',
-  title: 'Hello World',
+  id: 'maple-proxy',
+  title: 'Maple Proxy',
   license: 'MIT',
-  wrapperRepo: 'https://github.com/Start9Labs/hello-world-startos',
-  upstreamRepo: 'https://github.com/Start9Labs/hello-world',
-  supportSite: 'https://docs.start9.com/',
-  marketingSite: 'https://start9.com/',
-  donationUrl: 'https://donate.start9.com/',
-  docsUrl:
-    'https://github.com/Start9Labs/hello-world-startos/blob/master/instructions.md',
+  wrapperRepo: 'https://github.com/OpenSecretCloud/maple-proxy-startos',
+  upstreamRepo: 'https://github.com/OpenSecretCloud/maple-proxy',
+  supportSite: 'https://trymaple.ai',
+  marketingSite: 'https://trymaple.ai',
+  donationUrl: null,
+  docsUrl: 'https://blog.trymaple.ai/maple-proxy-documentation/',
   description: {
-    short: 'Bare bones example of a StartOS service',
-    long: 'Hello World is a template service that provides examples of basic StartOS features.',
+    short: 'Local API proxy for encrypted, privacy-preserving AI services',
+    long: 'Maple Proxy provides a local API proxy for encrypted, privacy-preserving AI services.',
   },
   volumes: ['main'],
   images: {
-    'hello-world': {
-      source: { dockerTag: 'start9/hello-world' },
+    'maple-proxy': {
+      source: {
+        dockerTag: 'ghcr.io/opensecretcloud/maple-proxy:0.1.5'
+      },
     },
   },
   alerts: {

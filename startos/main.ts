@@ -2,39 +2,42 @@ import { sdk } from './sdk'
 import { uiPort } from './utils'
 
 export const main = sdk.setupMain(async ({ effects }) => {
-  /**
-   * ======================== Setup (optional) ========================
-   *
-   * In this section, we fetch any resources or run any desired preliminary commands.
-   */
-  console.info('Starting Hello World!')
 
-  /**
-   * ======================== Daemons ========================
-   *
-   * In this section, we create one or more daemons that define the service runtime.
-   *
-   * Each daemon defines its own health check, which can optionally be exposed to the user.
-   */
+  console.info(' ... Starting Maple Proxy ... ')
+
+  const proxyEnv: {
+    MAPLE_HOST: string,
+    MAPLE_PORT: string,
+    MAPLE_ENABLE_CORS: string,
+    MAPLE_API_KEY?: string,
+  } = {
+    MAPLE_HOST: '0.0.0.0',
+    MAPLE_PORT: '8080',
+    MAPLE_ENABLE_CORS: 'true',
+  }
+
+  const apiKey = undefined // @TODO: store
+  if (apiKey) {
+    proxyEnv.MAPLE_API_KEY = apiKey
+  }
+
   return sdk.Daemons.of(effects).addDaemon('primary', {
     subcontainer: await sdk.SubContainer.of(
       effects,
-      { imageId: 'hello-world' },
-      sdk.Mounts.of().mountVolume({
-        volumeId: 'main',
-        subpath: null,
-        mountpoint: '/data',
-        readonly: false,
-      }),
-      'hello-world-sub',
+      { imageId: 'maple-proxy' },
+      sdk.Mounts.of(),
+      'proxy-sub',
     ),
-    exec: { command: ['hello-world'] },
+    exec: {
+      command: sdk.useEntrypoint(),
+      env: proxyEnv
+    },
     ready: {
-      display: 'Web Interface',
+      display: 'API',
       fn: () =>
         sdk.healthCheck.checkPortListening(effects, uiPort, {
-          successMessage: 'The web interface is ready',
-          errorMessage: 'The web interface is not ready',
+          successMessage: 'OK',
+          errorMessage: 'Error',
         }),
     },
     requires: [],

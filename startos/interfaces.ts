@@ -7,10 +7,10 @@ export const setInterfaces = sdk.setupInterfaces(async ({ effects }) => {
     protocol: 'http',
   })
   const ui = sdk.createInterface(effects, {
-    name: 'Web UI',
-    id: 'ui',
-    description: 'The web interface of Hello World',
-    type: 'ui',
+    name: 'API',
+    id: 'api',
+    description: '',
+    type: 'api',
     masked: false,
     schemeOverride: null,
     username: null,
