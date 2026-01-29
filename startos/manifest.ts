@@ -4,16 +4,15 @@ export const manifest = setupManifest({
   id: 'maple-proxy',
   title: 'Maple Proxy',
   license: 'MIT',
-  wrapperRepo: 'https://github.com/Start9Labs/hello-world-startos',
+  wrapperRepo: 'https://github.com/OpenSecretCloud/maple-proxy-startos',
   upstreamRepo: 'https://github.com/OpenSecretCloud/maple-proxy',
   supportSite: 'https://trymaple.ai',
   marketingSite: 'https://trymaple.ai',
-  donationUrl: 'https://trymaple.ai',
-  docsUrl:
-    'https://github.com/Start9Labs/hello-world-startos/blob/master/instructions.md',
+  donationUrl: null,
+  docsUrl: 'https://blog.trymaple.ai/maple-proxy-documentation/',
   description: {
-    short: 'Bare bones example of a StartOS service',
-    long: 'Hello World is a template service that provides examples of basic StartOS features.',
+    short: 'Local API proxy for encrypted, privacy-preserving AI services',
+    long: 'Maple Proxy provides a local API proxy for encrypted, privacy-preserving AI services.',
   },
   volumes: ['main'],
   images: {

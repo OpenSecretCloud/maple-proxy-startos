@@ -14,7 +14,7 @@ export const main = sdk.setupMain(async ({ effects }) => {
     MAPLE_ENABLE_CORS: 'true',
   }
 
-  const apiKey = undefined // @TOOD: store
+  const apiKey = undefined // @TODO: store
   if (apiKey) {
     proxyEnv.MAPLE_API_KEY = apiKey
   }
