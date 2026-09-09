@@ -2,7 +2,7 @@
   <img src="https://github.com/user-attachments/assets/3ed629a1-e5a9-42f0-a920-a1819ed92983" />
 </p>
 
-Wrapper repo for packaging the [Maple Proxy](https://github.com/OpenSecretCloud/maple-proxy) for StartOS.
+Wrapper repo for packaging the [Maple Proxy](https://github.com/MaplePrivacyLabs/Maple/tree/master/proxy) for StartOS.
 
 ## Building from source
 
